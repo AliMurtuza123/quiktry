@@ -23,7 +23,7 @@ export class DataStorageService {
   }
 
   fetchRecipes() {
-    this.authService.user.subscribe();
+    // this.authService.user.subscribe();
     return this.http
       .get<Recipe[]>(
         'https://recipeproject-82109-default-rtdb.asia-southeast1.firebasedatabase.app/recipes.json'

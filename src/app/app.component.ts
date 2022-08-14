@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   constructor(private dataStorage: DataStorageService, private authService: AuthService){}
 
   ngOnInit(): void {
+    this.dataStorage.fetchRecipes().subscribe();
     this.authService.autoLogin();
   }
 }
