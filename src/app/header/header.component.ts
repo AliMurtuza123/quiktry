@@ -9,8 +9,10 @@ import { DataStorageService } from '../shared/data-storage.service';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent implements OnInit,OnDestroy {
+  isMenuCollapsed = true;
   private userSub : Subscription;
   isAuthenticated = false;
+  isNavCollapsed = true;
   constructor(private dataStorageService: DataStorageService, private authService: AuthService) {}
 
   ngOnInit(): void {
@@ -35,5 +37,9 @@ export class HeaderComponent implements OnInit,OnDestroy {
 
   ngOnDestroy(): void {
     this.userSub.unsubscribe();
+  }
+
+  onClickTog(){
+    this.isNavCollapsed = !this.isNavCollapsed;
   }
 }

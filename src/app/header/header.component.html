@@ -2,9 +2,15 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a routerLink="/" class="navbar-brand">Quiktry</a>
+      <div class="dropdown">
+        <button type="button" class="navbar-toggle dropdown-toggle" data-toggle="collapse" (click)="onClickTog()">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+        </button>
+      </div>
     </div>
-
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" id="navbarCollapse" [ngClass]="{show: !isNavCollapsed }">
       <ul class="nav navbar-nav">
         <li routerLinkActive="active"><a routerLink="/recipes">Recipes</a></li>
         <li routerLinkActive="active"><a routerLink="/shopping-list">Shopping List</a></li>

@@ -11,7 +11,7 @@ import { PlaceholderDirective } from "./placeholder/placeholder.directive";
         AlertComponent,
         LoadingSpinnerComponent,
         PlaceholderDirective,
-        DropdownDirective
+        DropdownDirective,
     ],
     imports: [
         CommonModule,
